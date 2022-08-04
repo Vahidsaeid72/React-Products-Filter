@@ -10,6 +10,7 @@
     text-decoration: none;
     list-style: none;
     font-family:'vazir' !important;
+    box-sizing: border-box;
 }
 body{
     direction:rtl ;
