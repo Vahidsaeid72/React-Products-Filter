@@ -4,8 +4,12 @@ import './productsFilter/index.css';
 import items from './productsFilter/data';
 import { useState } from "react";
 
+
 const App = () => {
+
   const [menuItems , setMenuItems] = useState(items);
+  const AllCategory = ['همه',...new Set(items.map(item => (item.category)))]
+  console.log(AllCategory)
 
   const filteritem = (category)=>{
     if(category === "همه"){
@@ -25,7 +29,7 @@ const App = () => {
           <div className="underline">
           </div>
         </div>
-        <Categories filteritem={filteritem}/>
+        <Categories AllCategory={AllCategory} filteritem={filteritem}/>
         <Menu items={menuItems}/>
       </section>
    </main> 

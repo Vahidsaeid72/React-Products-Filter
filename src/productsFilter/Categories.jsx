@@ -1,12 +1,13 @@
 import React from 'react'
 
-function Categories({filteritem}) {
+function Categories({filteritem,AllCategory}) {
      return (
           <div className="btn-container">
-               <button onClick={()=> filteritem('همه')}>همه</button>
-               <button onClick={()=> filteritem('هدفون')}>هدفون</button>
-               <button onClick={()=> filteritem('لپ تاپ')}>لپ تاپ</button>
-               <button onClick={()=> filteritem('گوشی')}>گوشی</button>
+
+               {AllCategory.map((category,index) =>(
+                    <button key={index} onClick={()=> filteritem(category)}>{category}</button>
+               ))}
+          
           </div>
      )
 }

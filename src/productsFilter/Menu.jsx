@@ -7,7 +7,7 @@ function Menu({items}) {
                     items.map((item) => {
                          const {id,title,price,img,desc} = item;
                          return (
-                              <section className="menu-item">
+                              <section className="menu-item" key={id}>
                                    <img src={img} alt={title} className="photo" />
                                    <div className="item-info">
                                         <header>
